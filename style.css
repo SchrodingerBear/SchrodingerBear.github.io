@@ -346,4 +346,8 @@ body * {
 .w3-text-sand:hover {
     color: white!important;
 }
+
+.float-element {
+  vertical-align: -0.08em;"
+}
 /* */
