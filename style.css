@@ -1,5 +1,5 @@
 @charset "utf-8";
-body * {
+ body * {
      font-family: Montserrat, sans-serif;
      cursor: url("https://drive.google.com/uc?export=view&id=1F9KzpiGVu65GselxToEylCwtD-tFlnPE"), auto;
 }
@@ -139,11 +139,9 @@ body * {
  .w3-button:hover {
      color: rgb(245, 193, 11) !important;
 }
-
  .w3-border-green, .w3-hover-border-green:hover {
      border-color: rgb(245, 193, 11) !important;
 }
-
  @keyframes float {
      0% {
          box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
@@ -191,16 +189,14 @@ body * {
 }
  .content-container {
      width: 70%;
-     margin: 0px auto;    
-     border-radius: 50px; 
+     margin: 0px auto;
+     border-radius: 50px;
 }
-
  .content-container:hover {
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-  transition: ease-in 1.5s;
-  filter: hue-rotate(320deg);
+     box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+     transition: ease-in 1.5s;
+     filter: hue-rotate(320deg);
 }
-
  .home {
      width: 80%;
      margin: 0px auto;
@@ -320,34 +316,44 @@ body * {
      margin: auto;
      filter: hue-rotate(230deg);
 }
-.button-container {
-    text-align: center;
+ .button-container {
+     text-align: center;
 }
-
  .button:hover {
      background: #03e9f4;
      color: #050801;
      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
 }
-
-.w3-border-sand {
-  border-color: #03e9f4!important;
+ .w3-border-sand {
+     border-color: #03e9f4!important;
 }
-
-.feather {
-    width: 16px;
-    height: 16px;
+ .feather {
+     width: 16px;
+     height: 16px;
 }
-
-.w3-text-sand {
-    color: yellow!important;
+ .w3-text-sand {
+     color: yellow!important;
 }
-
-.w3-text-sand:hover {
-    color: white!important;
+ .w3-text-sand:hover {
+     color: white!important;
 }
-
-.float-element {
-  vertical-align: -0.08em;"
+ .float-element {
+     vertical-align: -0.08em;
+    " 
 }
-/* */
+ #myBtn {
+     position: fixed;
+     bottom: 20px;
+     right: 10px;
+     font-size: 18px;
+     border: none;
+     outline: none;
+     background-color: red;
+     color: white;
+     cursor: pointer;
+     padding: 15px;
+     opacity: 0.5;
+}
+ #myBtn:hover {
+     opacity: 1;
+}
