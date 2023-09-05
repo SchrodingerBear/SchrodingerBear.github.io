@@ -1202,6 +1202,7 @@ html[dir="rtl"] .side-header.side-header-right .primary-menu {
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm .navbar-collapse {
+    display: none !important;
     position: absolute;
     top: 99%;
     right: 0;
@@ -1211,13 +1212,18 @@ html[dir="rtl"] .side-header.side-header-right .primary-menu {
     z-index: 1000;
     -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+}
+
   }
   .navbar-expand-sm .navbar-collapse .navbar-nav {
     overflow: hidden;
     overflow-y: auto;
     max-height: 65vh;
     padding: 15px;
+    display: none !important;
   }
+
   .navbar-expand-sm ul.navbar-nav li {
     display: block;
     border-bottom: 1px solid #eee;
