@@ -1,10 +1,4 @@
-/*===========================================================
-
-   Template Name: Simone - Personal Portfolio Template
-   Author: Harnish Design
-   Template URL: http://demo.harnishdesign.net/html/simone
-   Author URL: https://themeforest.net/user/harnishdesign
-   File Description : Main css file of the template
+/*
 	
 =================================================
   Table of Contents
@@ -704,22 +698,25 @@ hr {
 }
 
 /*=== 4.1 Navigation ===*/
-.primary-menu {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  height: auto !important;
-  -webkit-box-ordinal-group: 0;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  background: #fff;
-  border-bottom: 1px solid #efefef;
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
+@media screen and (max-width: 991px) {
+  .primary-menu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: none !important;
+    height: auto !important;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    background: #fff;
+    border-bottom: 1px solid #efefef;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
+
 
 .primary-menu.bg-transparent {
   box-shadow: none;
