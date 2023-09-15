@@ -684,7 +684,7 @@ hr {
 
 #header .navbar {
   padding: 0px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 #header .logo {
@@ -2069,7 +2069,7 @@ html[dir="rtl"] .featured-box:not(.style-4).style-3 .featured-box-icon {
   -webkit-box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;#
 }
 
 .btn-video-play:hover {
