@@ -684,6 +684,7 @@ hr {
 
 #header .navbar {
   padding: 0px;
+  overflow: hidden;
 }
 
 #header .logo {
