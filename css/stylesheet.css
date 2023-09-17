@@ -37,7 +37,6 @@ html::-webkit-scrollbar {
 
 body,
 html {
-  display: none !important; 
   -ms-overflow-style: none;  
   scrollbar-width: none;  
   overflow-y: scroll;
