@@ -32,7 +32,7 @@
 /*  1. Basic Style 
 /* =================================== */
 html::-webkit-scrollbar {
-    display: none;
+    display: none; !important
 }
 
 body,
