@@ -34,12 +34,10 @@
 
 @media (max-width: 768px) {
 
+  /* Adjust the max-width as needed for your desired breakpoint */
   .wrapper {
     font-size: 40px;
-  }
-
-  .skill_stack {
-    width: 50%;
+    /* Adjust the font size for mobile devices */
   }
 }
 

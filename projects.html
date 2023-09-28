@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="resources/profile.png" type="res/x-icon">
+    <link rel="shortcut icon" href="Image/icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>Projects</title>
+    <link rel="preconnect" href="resources/materialize/css/materialize.min.css" />
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="resources/materialize/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="manifest" href="manifest.json" />
+
+</head>
+
+<body>
+
+    <div class="row" id="work">
+        <div class="col l12 m12 s12" id="work">
+        </div>
+    </div>
+
+    <script src="resources/materialize/js/jquery.min.js"></script>
+    <script src="resources/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/portfolio.js"></script>
+    <script>
+        for (p = 0; p <= portfolio.length - 1; p++) {
+            $('#work').append('<div class="col l4 m12 s12">' +
+                '<div class="col s12 card">' +
+                '<div class="card-image">' +
+                '<center>' +
+                '<img src="' + portfolio[p][0] + '" alt="" class="responsive-img materialboxed" id="system_preview" style="padding-top:10px;">' +
+                '</center>' +
+                '</div>' +
+                '<div class="card-content">' +
+                '<p id="system_name">' + portfolio[p][1] + '</p>' +
+                '<p id="system_info">' + portfolio[p][2] + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>');
+        }
+    </script>
+</body>
+
+</html>

@@ -32,17 +32,6 @@
   transform: translateX(-0.02em);
 }
 
-@media (max-width: 768px) {
-
-  .wrapper {
-    font-size: 40px;
-  }
-
-  .skill_stack {
-    width: 50%;
-  }
-}
-
 .circle {
   position: fixed;
   border: solid 1px #ccc;
