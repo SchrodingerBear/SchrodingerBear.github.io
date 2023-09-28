@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <link href="resources/profile.png" rel="icon" />
+    <title>404</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+
+        .container h1 {
+            color: #355c7d;
+            font-family: 'Fira Code', monospace;
+            font-weight: 800;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 170px;
+            animation: type 2s steps(40, end) forwards;
+        }
+
+        .container h1:nth-child(2) {
+            opacity: 0;
+            font-family: "Work Sans", sans-serif;
+            background: -webkit-linear-gradient(right, #f8b195, #f67280, #c06c84);
+            font-weight: 800;
+            font-size: 100px;
+            width: 430px;
+            -webkit-text-fill-color: transparent;
+            overflow: hidden;
+            animation: shring-animation 2.2s steps(40, end) 2s forwards, blink .5s step-end infinite alternate;
+        }
+
+        @keyframes shring-animation {
+            0% {
+                background-position: 0 0;
+                opacity: 0;
+                width: 0;
+            }
+
+            1% {
+                background-position: 0 0;
+                opacity: 1;
+                border-right: 1px solid orange;
+            }
+
+            50% {
+                background-position: 150px 0;
+                opacity: 1;
+                border-right: 1px solid orange;
+            }
+
+            100% {
+                background-position: 400px 0;
+                opacity: 1;
+                border-right: 1px solid orange;
+            }
+        }
+
+        @keyframes type {
+            0% {
+                width: 0;
+            }
+
+            1%,
+            99% {
+                border-right: 1px solid orange;
+            }
+
+            100% {
+                border-right: none;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        a {
+            color: transparent;
+        }
+
+        button {
+            background-color: #0a0a0a;
+            border: none;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #fffefe;
+            color: black;
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hi! Need Help?</h1>
+        <br>
+        <a href="https://fb.com/scvpfb" target="_blank"><button id="btn" style="display: none;">Yes Please!</button></a>
+    </div>
+
+</body>
+
+
+
+<script>
+    const button = document.getElementById("btn");
+
+    setTimeout(() => {
+        button.style.display = "block";
+    }, 3000);
+</script>
+
+</html>
