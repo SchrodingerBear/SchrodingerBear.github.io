@@ -1,44 +1,14 @@
-/*
-	
-=================================================
-  Table of Contents
-=================================================
-
-	1. Basic
-	2. Helpers Classes
-	3. Layouts
-	4. Header
-		4.1 Navigation
-		4.2 Secondary Nav
-		4.3 Page Header
-	5 Elements
-		5.1 Featured Box
-		5.2 Team
-		5.3 Accordion & Toggle
-		5.4 Nav
-		5.5 Tabs
-		5.6 Hero Background
-		5.7 Owl Carousel
-		5.8 Brands Grid
-		5.9 Portfolio
-		5.10 List Style
-	6 Footer
-		6.1 Social Icons
-		6.2 Back to Top
-	7 Extra
-
-=======================================================*/
 /* =================================== */
 /*  1. Basic Style 
 /* =================================== */
 html::-webkit-scrollbar {
-    display: none !important; 
+  display: none !important;
 }
 
 body,
 html {
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   overflow-y: scroll;
   height: 100%;
   cursor: url("https://drive.google.com/uc?export=view&id=1F9KzpiGVu65GselxToEylCwtD-tFlnPE"), auto;
@@ -2087,7 +2057,8 @@ html[dir="rtl"] .featured-box:not(.style-4).style-3 .featured-box-icon {
   -webkit-box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;#
+  transition: all 0.8s ease-in-out;
+  #
 }
 
 .btn-video-play:hover {
