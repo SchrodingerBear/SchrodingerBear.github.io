@@ -1,11 +1,3 @@
-/*
-================================================================
-* Template:  	 Simone - Personal Portfolio Template
-* Written by: 	 Harnish Design - (http://www.harnishdesign.net)
-* Description:   Main Custom Script File
-================================================================
-*/
-
 (function ($) {
   "use strict";
 
