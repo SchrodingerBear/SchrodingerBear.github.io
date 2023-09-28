@@ -7,9 +7,8 @@ html::-webkit-scrollbar {
 
 body,
 html {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: scroll;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
   height: 100%;
   cursor: url("https://drive.google.com/uc?export=view&id=1F9KzpiGVu65GselxToEylCwtD-tFlnPE"), auto;
 }
@@ -2058,7 +2057,6 @@ html[dir="rtl"] .featured-box:not(.style-4).style-3 .featured-box-icon {
   box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
-  #
 }
 
 .btn-video-play:hover {
