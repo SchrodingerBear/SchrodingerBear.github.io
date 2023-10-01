@@ -11,7 +11,7 @@ let portfolio = [
     ['resources/projects/acb.png', 'Angelyn Carlos Blog', 'Webiste / February 17, 2023'],
     ['resources/projects/sg.png', 'Sonic Game', 'Software / August 10, 2023'],
 
-    ['resources/projects/l.png', 'Login PHP', 'Web App / July 25, 2023'],
+    ['resources/projects/l.png', 'Login PHP', 'Website / July 25, 2023'],
     ['resources/projects/mtps.png', 'Motor Trade POS System', 'Software / October 1, 2023'],
     ['resources/projects/bpp.png', 'Beauty Product Proposal', 'Proposal / October 1, 2023'],
 
@@ -21,41 +21,41 @@ let portfolio = [
 
     ['resources/projects/stem.png', 'STEM Vocational Website', 'Website / October 1, 2023'],
     ['resources/projects/cds.png', 'Count Down System', 'Software / October 1, 2023'],
-    ['resources/projects/phplogin.png', 'PHP Login Website', 'Web App / October 1, 2023'],
+    ['resources/projects/phplogin.png', 'PHP Login Website', 'Website / October 1, 2023'],
 
-    ['resources/projects/fss.png', 'Fashion Shop System', 'Website / October 1, 2023'],
-    ['resources/projects/stochastic.png', 'Stochastic Modeling', 'Software / October 1, 2023'],
-    ['resources/projects/vs.png', 'Voting System', 'Software / October 1, 2023'],
+    ['resources/projects/fss.png', 'Fashion Shop System', 'Software / October 1, 2023'],
+    ['resources/projects/stochastic.png', 'Stochastic Modeling', 'Modeling / October 1, 2023'],
+    ['resources/projects/vs.png', 'Voting System', 'System / October 1, 2023'],
 
     ['resources/projects/networking.png', 'Networking Case Study', 'Case Study / October 1, 2023'],
     ['resources/projects/mg.png', 'Matching Game Repository APK', 'APK / October 1, 2023'],
     ['resources/projects/ds.png', 'Delivery System Pseudocode', 'Pseudocode / October 1, 2023'],
 
     ['resources/projects/csp.png', 'Coffee Shop POS System', 'Software / October 1, 2023'],
-    ['resources/projects/vms.png', 'Vending Machine System', 'Software / October 1, 2023'],
-    ['resources/projects/cq.png', 'Coding Quiz', 'Web App / October 1, 2023'],
+    ['resources/projects/vms.png', 'Vending Machine System', 'System / October 1, 2023'],
+    ['resources/projects/cq.png', 'Coding Quiz', 'Quiz / October 1, 2023'],
 
-    ['resources/projects/cfa.png', 'Cash Flow Analysis System', 'Software / October 1, 2023'],
-    ['resources/projects/tcmda.png', 'Tinker Circuit Motion Detector Alarm', 'Arduino / October 1, 2023'],
-    ['resources/projects/iris.png', 'Iris MLL Data Set', 'Software / October 1, 2023'],
+    ['resources/projects/cfa.png', 'Cash Flow Analysis System', 'System / October 1, 2023'],
+    ['resources/projects/tcmda.png', 'Tinker Circuit Motion Detector Alarm', 'Alarm / October 1, 2023'],
+    ['resources/projects/iris.png', 'Iris MLL Data Set', 'Data Set / October 1, 2023'],
 
-    ['resources/projects/acmjfx.png', 'ACM & JavaFX', 'Game Software / October 1, 2023'],
-    ['resources/projects/qs.png', 'Queuing System', 'Software / October 1, 2023'],
-    ['resources/projects/lms.png', 'Library Management Software', 'System / October 1, 2023'],
+    ['resources/projects/acmjfx.png', 'ACM & JavaFX', 'Software / October 1, 2023'],
+    ['resources/projects/qs.png', 'Queuing System', 'System / October 1, 2023'],
+    ['resources/projects/lms.png', 'Library Management System', 'System / October 1, 2023'],
 
-    ['resources/projects/enrollment-eclipse.png', 'Enrollment System (J - Eclipse)', 'Software / October 1, 2023'],
-    ['resources/projects/enrollment-netbeans.png', 'Enrollment System (J - NetBeans)', 'Software / October 1, 2023'],
+    ['resources/projects/enrollment-eclipse.png', 'Enrollment System (J - Eclipse)', 'System / October 1, 2023'],
+    ['resources/projects/enrollment-netbeans.png', 'Enrollment System (J - NetBeans)', 'System / October 1, 2023'],
     ['resources/projects/notepad-eclipse.png', 'Notepad (J - Eclipse)', 'Software / October 1, 2023'],
 
-    ['resources/projects/chicken-runner.png', 'Chicken Runner', 'Game Software / October 1, 2023'],
+    ['resources/projects/chicken-runner.png', 'Chicken Runner', 'Game / October 1, 2023'],
     ['resources/projects/3-gui-projects-netbeans.png', '3 GUI Projects (J - NetBeans)', 'Software / October 1, 2023'],
-    ['resources/projects/crime-management.png', 'PHP Crime Management System', 'Web App / October 1, 2023'],
+    ['resources/projects/crime-management.png', 'PHP Crime Management System', 'System / October 1, 2023'],
 
-    ['resources/projects/lab-supply.png', 'PHP Laboratory Supply System', 'Web App / October 1, 2023'],
-    ['resources/projects/python-password.png', 'Python Password Keys', 'Software / October 1, 2023'],
-    ['resources/projects/network-engineering-ip.png', 'Network Engineering IP', 'Console / October 1, 2023'],
+    ['resources/projects/lab-supply.png', 'PHP Laboratory Supply System', 'System / October 1, 2023'],
+    ['resources/projects/python-password.png', 'Python Password Keys', 'Keys / October 1, 2023'],
+    ['resources/projects/network-engineering-ip.png', 'Network Engineering IP', 'IP / October 1, 2023'],
 
     ['resources/projects/calculators.png', 'Calculators', 'Software / October 1, 2023'],
-    ['resources/projects/javafx-sonic.png', 'JavaFX Sonic Game', 'Game Software / October 1, 2023'],
+    ['resources/projects/javafx-sonic.png', 'JavaFX Sonic Game', 'Game / October 1, 2023'],
     ['resources/projects/pos-system.png', 'POS System', 'Software / October 1, 2023'],
 ];
