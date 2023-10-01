@@ -6,16 +6,20 @@ let portfolio = [
     ['resources/projects/lrpc.png', 'Linear Regression Predicting Course', 'Web App / October 1, 2023'],
     ['resources/projects/lpr.png', 'License Plate Recognition', 'Web App / October 1, 2023'],
     ['resources/projects/slt.png', 'Sign Language Translator', 'Web Application / September 16, 2023'],
-    ['resources/projects/svw.png', 'STEM Vocational Website', 'Website / October 1, 2023'],
 
     ['resources/projects/bbp.png', 'Boss Billy POS', 'Software / August 14, 2023'],
     ['resources/projects/acb.png', 'Angelyn Carlos Blog', 'Webiste / February 17, 2023'],
     ['resources/projects/sg.png', 'Sonic Game', 'Software / August 10, 2023'],
 
-    ['resources/projects/cwps.png', 'Computer Ware POS System', 'Software / October 1, 2023'],
-    ['resources/projects/mtps.png', 'Motor Trade POS System', 'Software / October 1, 2023'],
     ['resources/projects/l.png', 'Login PHP', 'Web App / July 25, 2023'],
+    ['resources/projects/mtps.png', 'Motor Trade POS System', 'Software / October 1, 2023'],
+    ['resources/projects/bpp.png', 'Beauty Product Proposal', 'Proposal / October 1, 2023'],
 
+    ['resources/projects/cwps.png', 'Computer Ware POS System', 'Software / October 1, 2023'],
+    ['resources/projects/hrms.png', 'HR Management System', 'Software / October 1, 2023'],
+    ['resources/projects/dlc.png', 'DLC Database', 'Database / October 1, 2023'],
+
+    ['resources/projects/stem.png', 'STEM Vocational Website', 'Website / October 1, 2023'],
     ['resources/projects/cds.png', 'Count Down System', 'Software / October 1, 2023'],
     ['resources/projects/phplogin.png', 'PHP Login Website', 'Web App / October 1, 2023'],
 
