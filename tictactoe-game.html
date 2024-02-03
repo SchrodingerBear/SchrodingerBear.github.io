@@ -260,10 +260,14 @@
         </div>
     </div>
 
-    <script src="index.js"></script>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const gameMode = localStorage.getItem('gameMode');
+            
+            if (!gameMode) {
+                    window.location.href = 'tictactoe-menu.html'; 
+            }
+            
             const chatBubble = document.querySelector('.chat-bubble');
             const spinner = document.querySelector('.spinner');
             const container = document.querySelector('.container1');
@@ -285,14 +289,14 @@
                     showCloseButton: true,
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = 'index.html';
+                        window.location.href = 'tictactoe-game.html';
                     } else if (result.dismiss === Swal.DismissReason.cancel) {
                     }
                 });
             });
         });
 
-        const gameMode = localStorage.getItem('gameMode');
+        
         const difficulty = localStorage.getItem('difficulty');
         if (gameMode) {
             document.title = `TTT | ${gameMode.toUpperCase()}`;
