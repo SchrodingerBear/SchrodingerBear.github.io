@@ -262,64 +262,64 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const gameMode = localStorage.getItem('gameMode');
-            
-            if (!gameMode) {
-                    window.location.href = 'tictactoe-menu.html'; 
-            }
-            
-            const chatBubble = document.querySelector('.chat-bubble');
-            const spinner = document.querySelector('.spinner');
-            const container = document.querySelector('.container1');
-
-            spinner.style.display = 'block';
-
-            setTimeout(() => {
-                spinner.style.display = 'none';
-                container.style.display = 'flex';
-                container.classList.add('fade-in');
-            }, 2000);
-
-            chatBubble.addEventListener('click', function () {
-                Swal.fire({
-                    title: 'Forfeit Match?',
-                    showCancelButton: true,
-                    confirmButtonText: 'Yes!',
-                    cancelButtonText: 'No',
-                    showCloseButton: true,
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = 'tictactoe-game.html';
-                    } else if (result.dismiss === Swal.DismissReason.cancel) {
-                    }
-                });
+        const gameMode = localStorage.getItem('gameMode');
+        
+        if (!gameMode) {
+            window.location.href = 'tictactoe-menu.html'; 
+        }
+        
+        const chatBubble = document.querySelector('.chat-bubble');
+        const spinner = document.querySelector('.spinner');
+        const container = document.querySelector('.container1');
+    
+        spinner.style.display = 'block';
+    
+        setTimeout(() => {
+            spinner.style.display = 'none';
+            container.style.display = 'flex';
+            container.classList.add('fade-in');
+        }, 2000);
+    
+        chatBubble.addEventListener('click', function () {
+            Swal.fire({
+                title: 'Forfeit Match?',
+                showCancelButton: true,
+                confirmButtonText: 'Yes!',
+                cancelButtonText: 'No',
+                showCloseButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'tictactoe-game.html';
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                }
             });
         });
-
-        
+    
         const difficulty = localStorage.getItem('difficulty');
+    
         if (gameMode) {
             document.title = `TTT | ${gameMode.toUpperCase()}`;
-
+    
             if (difficulty) {
                 document.title += ` | ${difficulty.toUpperCase()}`;
             }
         }
-
+    
         let modeSelector;
-
+    
         if (gameMode) {
             document.title = `TTT | ${gameMode.toUpperCase()}`;
-
+    
             if (difficulty) {
                 document.title += ` | ${difficulty.toUpperCase()}`;
             }
         }
+    
         gamemodelabel.textContent = `${gameMode.toUpperCase()}`;
         if (difficulty) {
             gamemodelabel.textContent += ` |  ${difficulty.toUpperCase()}`;
         }
-
+    
         if (gameMode.toLowerCase() === 'player vs player') {
             modeSelector = 'pvp';
         } else if (gameMode.toLowerCase() === 'player vs ai' && difficulty.toLowerCase() === 'easy') {
