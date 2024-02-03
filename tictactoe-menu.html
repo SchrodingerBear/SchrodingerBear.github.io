@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <title>TTT | MAIN</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.freepik.com/512/566/566294.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+    <style>
+        /* Custom styles for dark theme */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce44cf145197895.629b268b5a47d.gif');
+            background-size: cover;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .menu-link {
+            margin-bottom: 10px;
+        }
+
+        #welcome {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+        }
+
+        .btn {
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        .menu-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu-container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-dark col-md-3 mb-2" id="playButton">PLAY</button>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-dark col-md-3 mb-2">SCORE</button>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-dark col-md-3 mb-2" id="logoutButton">LOGOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="welcome"></div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- SweetAlert library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        window.onload = function () {
+            TweenMax.staggerFrom(".btn", 2, { scale: 0.5, opacity: 0, delay: 0.5, ease: Elastic.easeOut, force3D: true }, 0.2);
+
+            var storedUsername = localStorage.getItem('username');
+            if (!storedUsername) {
+                Swal.fire({
+                    title: 'Enter your Username',
+                    input: 'text',
+                    inputPlaceholder: 'Fuzzy Paws',
+                    showCancelButton: false,
+                    confirmButtonText: 'Save',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    inputValidator: (value) => {
+                        if (!value) {
+                            return 'Please enter your username';
+                        }
+                        var capitalizedUsername = value.charAt(0).toUpperCase() + value.slice(1);
+                        localStorage.setItem('username', capitalizedUsername);
+                        document.getElementById('welcome').innerText = 'Welcome ' + capitalizedUsername + '!';
+                    }
+                });
+            } else {
+                document.getElementById('welcome').innerText = 'Welcome ' + storedUsername + '!';
+            }
+        };
+        document.getElementById("playButton").addEventListener("click", function () {
+            Swal.fire({
+                title: 'Choose Game Mode',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Player vs Player',
+                cancelButtonText: 'Player vs AI',
+                reverseButtons: true,
+                customClass: {
+                    container: 'dark-theme'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    localStorage.setItem('gameMode', 'Player vs Player');
+                    localStorage.setItem('difficulty', '');
+                    proceedToGame();
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire({
+                        title: 'Choose Difficulty',
+                        input: 'select',
+                        inputOptions: {
+                            'easy': 'Easy',
+                            'normal': 'Normal',
+                            'hard': 'Hard'
+                        },
+                        inputPlaceholder: 'Select a difficulty',
+                        showCancelButton: true,
+                        reverseButtons: true,
+                        inputValidator: (value) => {
+                            if (!value) {
+                                return 'You must choose a difficulty'
+                            }
+                        },
+                        customClass: {
+                            container: 'dark-theme'
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            localStorage.setItem('gameMode', 'Player vs AI');
+                            localStorage.setItem('difficulty', result.value);
+                            proceedToGame();
+                        }
+                    })
+                }
+            })
+        });
+
+        function proceedToGame() {
+            TweenMax.staggerTo(".btn", 1, { opacity: 0, y: -1100, ease: Back.easeIn }, 0.5, function () {
+                window.location.href = 'game.html';
+            });
+        }
+
+        document.getElementById("logoutButton").addEventListener("click", function () {
+            localStorage.removeItem('username');
+            location.reload();
+        });
+
+
+    </script>
+</body>
+
+</html>
