@@ -5,30 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://cdn-icons-png.freepik.com/512/566/566294.png">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>TTT | </title>
+    <title>DREAMY DUEL | </title>
     <style>
-        .spinner {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-        }
-
-        .spinner .fa-spinner {
-            font-size: 50px;
-            color: #fff;
-        }
-
-
-        .container1 {
-            display: none;
-        }
-
         html {
             height: 100%;
             margin: 0;
@@ -36,8 +16,8 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #282c35;
-            color: #fff;
+            background-color: #fff;
+            color: white;
         }
 
         .chat-bubble {
@@ -46,7 +26,7 @@
             right: 20px;
             width: 60px;
             height: 60px;
-            background-color: black;
+            background-color: #ff69b4;
             border-radius: 50%;
             cursor: pointer;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -57,7 +37,7 @@
 
         .container1 {
             margin-top: 5%;
-            display: none;
+            display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
@@ -65,9 +45,22 @@
         }
 
 
+        .container.show-menu .hamburger-menu {
+            display: flex;
+        }
+
         #gamemodelabel {
-            color: #61dafb;
+            color: #ff69b4;
             font-weight: bold;
+        }
+
+        .container1 {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            transition: background-color 0.3s;
         }
 
         .container {
@@ -81,7 +74,7 @@
         }
 
         h1 {
-            color: #61dafb;
+            color: #ff69b4;
             margin-bottom: 20px;
         }
 
@@ -119,16 +112,18 @@
             align-items: center;
             justify-content: center;
             font-size: 28px;
-            background-color: #282c35;
-            border: 3px solid #1e1e26;
+            background-color: #ff69b4;
+            border: 3px solid #fff;
             border-radius: 15px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.1s, border-color 0.3s;
+            color: #fff;
         }
 
         .cell.winner {
-            background-color: #4caf50;
-            border-color: #43a047;
+            background-color: #fff;
+            color: #ff69b4;
+            border-color: #ff69b4;
         }
 
         .cell:hover {
@@ -142,13 +137,13 @@
         #turn {
             font-size: 24px;
             margin-bottom: 20px;
-            color: #61dafb;
+            color: #ff69b4;
         }
 
         #status {
             font-size: 20px;
             margin-bottom: 20px;
-            color: #61dafb;
+            color: #ff69b4;
         }
 
         #score {
@@ -183,10 +178,20 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
+        .swal2-confirm {
+            background-color: #ff69b4 !important;
+            color: #fff !important;
+        }
+
+        .swal2-cancel {
+            background-color: #ff1493 !important;
+            color: #fff !important;
+        }
+
         #play-again {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #61dafb;
+            background-color: #ff69b4;
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -196,16 +201,15 @@
         }
 
         #play-again:hover {
-            background-color: #61dafb;
+            background-color: #ff1493;
         }
-
 
         #play-again1 {
             display: none;
             text-decoration: none;
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #fb6161;
+            background-color: #ff1493;
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -213,7 +217,6 @@
             margin-top: 10px;
             transition: background-color 0.3s;
         }
-
 
         @media (max-width: 600px) {
             .board {
@@ -226,6 +229,25 @@
                 font-size: 20px;
             }
         }
+
+        .spinner {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        .spinner .fa-spinner {
+            font-size: 50px;
+            color: #ff1493;
+        }
+
+
+        .container1 {
+            display: none;
+        }
     </style>
 </head>
 
@@ -234,14 +256,14 @@
         <i class="fa fa-spinner fa-spin"></i>
     </div>
 
-    <div class="chat-bubble">
+    <div class="chat-bubble" style="display: none;">
         <i class="fa fa-bars"></i>
     </div>
 
 
-    <div class="container1">
+    <div class="container1" style="background: transparent;">
         <div class="container">
-            <div>Game Mode: <span style="font-weight: bold;" id="gamemodelabel"></span>
+            <div style="color: white;">Game Mode: <span style="font-weight: bold;" id="gamemodelabel"></span>
             </div>
             <div id="board" class="board"></div>
 
@@ -258,78 +280,13 @@
                 <div class="modal-content">
                     <p id="modal-message"></p>
                     <button id="play-again">Play Again</button>
-                    <a id="play-again1" href="index.html">Exit</a>
+                    <a id="play-again1" href="tictactoe-menu.html">Exit</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="index.js"></script>
-
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const chatBubble = document.querySelector('.chat-bubble');
-            const spinner = document.querySelector('.spinner');
-            const container = document.querySelector('.container1');
-
-            spinner.style.display = 'block';
-
-            setTimeout(() => {
-                spinner.style.display = 'none';
-                container.style.display = 'flex';
-                container.classList.add('fade-in');
-            }, 2000);
-
-            chatBubble.addEventListener('click', function () {
-                Swal.fire({
-                    title: 'Forfeit Match?',
-                    showCancelButton: true,
-                    confirmButtonText: 'Yes!',
-                    cancelButtonText: 'No',
-                    showCloseButton: true,
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = 'tictactoe-menu.html';
-                    } else if (result.dismiss === Swal.DismissReason.cancel) {
-                    }
-                });
-            });
-        });
-
-        const gameMode = localStorage.getItem('gameMode');
-        const difficulty = localStorage.getItem('difficulty');
-        if (gameMode) {
-            document.title = `TTT | ${gameMode.toUpperCase()}`;
-
-            if (difficulty) {
-                document.title += ` | ${difficulty.toUpperCase()}`;
-            }
-        }
-
-        let modeSelector;
-
-        if (gameMode) {
-            document.title = `TTT | ${gameMode.toUpperCase()}`;
-
-            if (difficulty) {
-                document.title += ` | ${difficulty.toUpperCase()}`;
-            }
-        }
-        gamemodelabel.textContent = `${gameMode.toUpperCase()}`;
-        if (difficulty) {
-            gamemodelabel.textContent += ` |  ${difficulty.toUpperCase()}`;
-        }
-
-        if (gameMode.toLowerCase() === 'player vs player') {
-            modeSelector = 'pvp';
-        } else if (gameMode.toLowerCase() === 'player vs ai' && difficulty.toLowerCase() === 'easy') {
-            modeSelector = 'pva';
-        } else if (gameMode.toLowerCase() === 'player vs ai' && difficulty.toLowerCase() === 'normal') {
-            modeSelector = 'pvb';
-        } else if (gameMode.toLowerCase() === 'player vs ai' && difficulty.toLowerCase() === 'hard') {
-            modeSelector = 'pvc';
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             const boardElement = document.getElementById('board');
             const turnElement = document.getElementById('turn');
@@ -347,46 +304,63 @@
             let playerXScore = 0;
             let playerOScore = 0;
 
-            const winPatterns = [
-                // VERTICAL
-                [0, 6, 12, 18, 24],
-                [1, 7, 13, 19, 25],
-                [2, 8, 14, 20, 26],
-                [3, 9, 15, 21, 27],
-                [4, 10, 16, 22, 28],
-                [5, 11, 17, 23, 29],
+            let winPatterns;
 
-                // HORIZONTAL
-                [0, 1, 2, 3, 4, 5],
-                [6, 7, 8, 9, 10, 11],
-                [12, 13, 14, 15, 16, 17],
-                [18, 19, 20, 21, 22, 23],
-                [24, 25, 26, 27, 28, 29],
+            if (playerMode === 'pvc') {
+                winPatterns = [
+                    // VERTICAL
+                    [0, 6, 12, 18, 24],
+                    [1, 7, 13, 19, 25],
+                    [2, 8, 14, 20, 26],
+                    [3, 9, 15, 21, 27],
+                    [4, 10, 16, 22, 28],
+                    [5, 11, 17, 23, 29],
 
-                // LEFT TO RIGHT DIAGONAL (TOP)
-                [0, 7, 14, 21, 28],
-                [1, 8, 15, 22, 29],
+                    // HORIZONTAL
+                    [0, 1, 2, 3, 4, 5],
+                    [6, 7, 8, 9, 10, 11],
+                    [12, 13, 14, 15, 16, 17],
+                    [18, 19, 20, 21, 22, 23],
+                    [24, 25, 26, 27, 28, 29],
+                ];
+            } else {
+                winPatterns = [
+                    // VERTICAL
+                    [0, 6, 12, 18, 24],
+                    [1, 7, 13, 19, 25],
+                    [2, 8, 14, 20, 26],
+                    [3, 9, 15, 21, 27],
+                    [4, 10, 16, 22, 28],
+                    [5, 11, 17, 23, 29],
 
-                [2, 9, 16, 23],
-                [3, 10, 17],
-                [4, 11],
+                    // HORIZONTAL
+                    [0, 1, 2, 3, 4, 5],
+                    [6, 7, 8, 9, 10, 11],
+                    [12, 13, 14, 15, 16, 17],
+                    [18, 19, 20, 21, 22, 23],
+                    [24, 25, 26, 27, 28, 29],
 
-                [6, 13, 20, 27],
-                [12, 19, 26],
-                [18, 25],
+                    // LEFT TO RIGHT DIAGONAL (TOP)
+                    [0, 7, 14, 21, 28],
+                    [1, 8, 15, 22, 29],
+                    [2, 9, 16, 23],
+                    [3, 10, 17],
+                    [4, 11],
+                    [6, 13, 20, 27],
+                    [12, 19, 26],
+                    [18, 25],
 
-                // RIGHT TO LEFT DIAGONAL (TOP)
-                [4, 9, 14, 19, 24],
-                [5, 10, 15, 20, 25],
-
-                [11, 16, 21, 26],
-                [17, 22, 27],
-                [23, 28],
-
-                [3, 8, 13, 18],
-                [2, 7, 12],
-                [1, 6],
-            ];
+                    // RIGHT TO LEFT DIAGONAL (TOP)
+                    [4, 9, 14, 19, 24],
+                    [5, 10, 15, 20, 25],
+                    [11, 16, 21, 26],
+                    [17, 22, 27],
+                    [23, 28],
+                    [3, 8, 13, 18],
+                    [2, 7, 12],
+                    [1, 6]
+                ];
+            }
 
             const renderBoard = () => {
                 boardElement.innerHTML = '';
@@ -437,12 +411,22 @@
                     console.log('Checking pattern:', pattern);
                     console.log('Cells:', board[a], board[b], board[c], board[d], board[e], board[f]);
 
-                    if (playerMode === 'pvc' && (pattern.length === 6 || pattern.length === 5)) {
-                        continue;
+                    if (playerMode === 'pvc') {
+                        if (pattern.length === 6) {
+                            if (board[a] && board[a] === board[b] && board[a] === board[c] && board[a] === board[d] && board[a] === board[e] && board[a] === board[f]) {
+                                highlightWinningCells(pattern);
+                                return board[a];
+                            }
+                        } else if (pattern.length === 5) {
+                            if (board[a] && board[a] === board[b] && board[a] === board[c] && board[a] === board[d] && board[a] === board[e]) {
+                                highlightWinningCells(pattern);
+                                return board[a];
+                            }
+                        }
                     }
 
                     if ((playerMode === 'pvb' && (pattern.length === 6 || pattern.length === 5 || pattern.length === 4)) ||
-                        (playerMode === 'pva' && (pattern.length >= 2 && pattern.length <= 6))) {
+                        (playerMode === 'pva' && (pattern.length >= 2 && pattern.length <= 6)) || (playerMode === 'pvp')) {
                         if (pattern.length === 6) {
                             if (board[a] && board[a] === board[b] && board[a] === board[c] && board[a] === board[d] && board[a] === board[e] && board[a] === board[f]) {
                                 highlightWinningCells(pattern);
@@ -642,6 +626,71 @@
 
             resetGame();
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const chatBubble = document.querySelector('.chat-bubble');
+            const spinner = document.querySelector('.spinner');
+            const container = document.querySelector('.container1');
+
+            spinner.style.display = 'block';
+
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                container.style.display = 'flex';
+                container.classList.add('fade-in');
+                chatBubble.style.display = 'flex';
+                document.body.style.backgroundColor = 'lightpink';
+            }, 2000);
+
+            chatBubble.addEventListener('click', function () {
+                Swal.fire({
+                    title: 'Forfeit Match?',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes!',
+                    cancelButtonText: 'No',
+                    showCloseButton: true,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = 'tictactoe-menu.html';
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    }
+                });
+            });
+        });
+
+        const gameMode = localStorage.getItem('gameMode');
+        const difficulty = localStorage.getItem('difficulty');
+        if (gameMode) {
+            document.title = `DREAMY DUEL | ${gameMode.toUpperCase()}`;
+
+            if (difficulty) {
+                document.title += ` | ${difficulty.toUpperCase()}`;
+            }
+        }
+
+        let modeSelector;
+
+        if (gameMode) {
+            document.title = `DREAMY DUEL | ${gameMode.toUpperCase()}`;
+
+            if (difficulty) {
+                document.title += ` | ${difficulty.toUpperCase()}`;
+            }
+        }
+        gamemodelabel.textContent = `${gameMode.toUpperCase()}`;
+        if (difficulty) {
+            gamemodelabel.textContent += ` |  ${difficulty.toUpperCase()}`;
+        }
+
+        if (gameMode.toLowerCase() === 'player vs player') {
+            modeSelector = 'pvp';
+        } else if (gameMode.toLowerCase() === 'player vs ai' && difficulty.toLowerCase() === 'easy') {
+            modeSelector = 'pva';
+        } else if (gameMode.toLowerCase() === 'player vs ai' && difficulty.toLowerCase() === 'normal') {
+            modeSelector = 'pvb';
+        } else if (gameMode.toLowerCase() === 'player vs ai' && difficulty.toLowerCase() === 'hard') {
+            modeSelector = 'pvc';
+        }
     </script>
 </body>
 
