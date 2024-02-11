@@ -1,0 +1,47 @@
+Title: "School Grade Releasing and Monitoring System"
+
+Chapter 1: Introduction
+
+Introduction:
+
+In today's digital age, the education sector is constantly evolving, integrating technology to streamline processes and enhance efficiency. One such area of focus is the dissemination of academic grades to students. Traditionally, educational institutions employ centralized systems for grade release through a report card, physical copy. However, with the advent of technology, students are increasingly empowered to take charge of their academic journey, including the management of their own grades. This study explores the development and implementation of a student-created Grade Releasing System, aiming to revolutionize the traditional approach to grade dissemination.
+
+Statement of the Problem:
+
+The conventional method of grade release in educational institutions is often marred by inefficiencies, including delayed notifications, schedules, and a lack of transparency. This study addresses the following issues:
+1. Slow dissemination of grades leading to frustration and uncertainty among students.
+2. Limited accessibility and transparency in the current grade release systems.
+3. Dependency on administrative personnel for the dissemination of grades, resulting in delays and potential errors.
+
+Hypothesis of the Study:
+
+It is hypothesized that the implementation of a student-created Grade Releasing System will:
+1. Improve the timeliness of grade dissemination.
+2. Enhance accessibility and transparency for students regarding their academic performance.
+3. Reduce dependency on administrative personnel, thereby streamlining the process of grade release.
+
+Objectives:
+
+The objectives of this study are:
+1. To develop a student-centric Grade Releasing System that empowers students to manage their own academic grades.
+2. To assess the effectiveness of the developed system in improving the timeliness and transparency of grade release.
+3. To evaluate the impact of the student-created Grade Releasing System on reducing administrative burden and potential errors in grade dissemination.
+
+Delimitation of Study:
+
+This study focuses specifically on the development and implementation of a Grade Releasing System by students within a particular educational institution. It does not address broader issues related to educational technology or grade management systems in other contexts.
+
+Scope of Study:
+
+The scope of this study encompasses:
+1. The design and development of a user-friendly Grade Releasing System tailored to the needs of students.
+2. Implementation of the system within a selected educational institution.
+3. Evaluation of the system's effectiveness through user feedback and analysis of grade release data.
+
+Theoretical Framework:
+
+This study draws upon principles of user-centered design, empowerment theory, and technology adoption models to guide the development and implementation of the student-created Grade Releasing System. User-centered design principles ensure that the system is intuitive and user-friendly, empowering students to take ownership of their academic records. Additionally, theories of technology adoption provide insights into factors influencing the acceptance and utilization of the system among students.
+
+Conceptual Framework:
+
+The conceptual framework of this study revolves around the interaction between students, technology, and educational institutions. It illustrates how the implementation of a student-created Grade Releasing System can transform the traditional dynamics of grade dissemination, empowering students, and fostering a culture of transparency and accountability within the educational institution.
