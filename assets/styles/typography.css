@@ -1,0 +1,15 @@
+@font-face {
+  font-family:'Figtree';
+  src: url('../font/Figtree/Figtree-VariableFont_wght.ttf');
+  font-weight: 300 900;
+}
+
+@font-face {
+  font-family:'Jura';
+  src: url('../font/Jura/Jura-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family:'JetBrains Mono';
+  src: url('../font/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf');
+}
